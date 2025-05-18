@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanatishe.ru - Темное логово Рипера</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="C:\YD\progs\fastapi\tanatishe_site\src\static\favicon.png">
+     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 20px 0;
+            border-bottom: 3px solid #ff0000;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff0000;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        nav {
+            background-color: #1a1a1a;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            background-image: url('https://images.blz-contentstack.com/v3/assets/blt9c12f249ac15c7ec/blt4e1a7ea6b9c0d735/5ebd3b3a1b73e36d7e3a6a5a/reaper.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ff0000;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h2 {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            height: 200px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        footer {
+            background-color: #000000;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 3px solid #ff0000;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">TANATISHE.RU</div>
+    </header>
+
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#">О Рипере</a>
+        <a href="#">Галерея</a>
+        <a href="#">Статьи</a>
+        <a href="#">Контакты</a>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>ГАБРИЭЛЬ РЕЙС - ТЕНЬ СМЕРТИ</h1>
+                <p>Погрузитесь в мир самого загадочного и смертоносного персонажа вселенной Overwatch. Рипер - это олицетворение тьмы и разрушения.</p>
+                <a href="#" class="btn">Узнать больше</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>О Рипере</h2>
+            <p>Рипер - один из самых опасных наемников в мире и бывший член Overwatch, известный под именем Габриэль Рейс. После разрушительного инцидента, который изменил его на клеточном уровне, он стал живым оружием, способным превращаться в тень.</p>
+            <p>Его способности включают телепортацию, превращение в неосязаемую дымовую форму и использование пары адских дробовиков. Его ультимативная способность "Смертельный цветок" позволяет ему уничтожать всех врагов в радиусе действия.</p>
+        </div>
+
+        <div class="section">
+            <h2>Галерея Рипера</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="C:\YD\progs\fastapi\tanatishe_site\src\static\reaper1.jpg" alt="Рипер - Overwatch">
+                    <div class="gallery-caption">Рипер в стандартном облике</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.blz-contentstack.com/v3/assets/blt9c12f249ac15c7ec/blt0b9fcc5a5a0b6723/5ebd3b3a9d6e6d6f9e3a6a5b/reaper-blackwatch.jpg" alt="Рипер - Blackwatch">
+                    <div class="gallery-caption">Рипер в облике Blackwatch</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.blz-contentstack.com/v3/assets/blt9c12f249ac15c7ec/blt8a1e6656c0f7f3b5/5ebd3b3a9d6e6d6f9e3a6a5c/reaper-marathon.jpg" alt="Рипер - Марафон">
+                    <div class="gallery-caption">Альтернативный скин "Марафон"</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.blz-contentstack.com/v3/assets/blt9c12f249ac15c7ec/blt5f1c2a2d78e91a8e/5ebd3b3a9d6e6d6f9e3a6a5d/reaper-soldier-24.jpg" alt="Рипер - Солдат 24">
+                    <div class="gallery-caption">Скин "Солдат 24"</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.blz-contentstack.com/v3/assets/blt9c12f249ac15c7ec/blt4c1c6c4e1c8a5a5a/5ebd3b3a9d6e6d6f9e3a6a5e/reaper-shrug.jpg" alt="Рипер - Пожимание плечами">
+                    <div class="gallery-caption">Легендарная поза "Пожимание плечами"</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.blz-contentstack.com/v3/assets/blt9c12f249ac15c7ec/blt7a5e9a1f5f7f3b5f/5ebd3b3a9d6e6d6f9e3a6a5f/reaper-abilities.jpg" alt="Рипер - Способности">
+                    <div class="gallery-caption">Рипер использует свои способности</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Цитаты Рипера</h2>
+            <p><em>"Смерть ходит за вами..."</em></p>
+            <p><em>"Я - тень, которая настигнет вас."</em></p>
+            <p><em>"Пора жать урожай."</em></p>
+            <p><em>"Дьяволы зовут меня Габриэлем."</em></p>
+            <p><em>"Overwatch падет."</em></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 tanatishe.ru - Все права защищены. Overwatch и все связанные элементы являются собственностью Blizzard Entertainment.</p>
+        <p>Этот сайт создан фанатами для фанатов и не является официальным ресурсом Overwatch.</p>
+    </footer>
+</body>
+</html>
