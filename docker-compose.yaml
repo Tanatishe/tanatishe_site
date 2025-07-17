@@ -1,24 +1,56 @@
+version: '3.8'
+
 services:
   site:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
     networks:
       - simple_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
 
   nginx:
     image: nginx:latest
     container_name: nginx
     restart: always
     ports:
-      - 80:80
+      - "80:80"
+      - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./src/static:/var/www/static/
     depends_on:
-      - site
+      site:
+        condition: service_healthy
     networks:
       - simple_net
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
 
 networks:
   simple_net:
